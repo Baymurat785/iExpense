@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct iExpenseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(expenseType: .all)
+                .modelContainer(for: [ExpenseItem.self])
+            
         }
     }
 }
